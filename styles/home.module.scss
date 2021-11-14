@@ -1,0 +1,154 @@
+.video {
+  width: 100vw;
+  height: 56.25vw;
+  background-color: #000;
+}
+
+.container {
+  margin-top: 7.135vw;
+  padding: 0 15.625vw;
+  article {
+    margin-bottom: 5.729vw;
+    display: flex;
+    > div.description {
+      flex: 1;
+      padding-top: 5.729vw;
+      > p {
+        color: white;
+        font-family: Montserrat-Regular;
+      }
+      > p:nth-child(1) {
+        font-size: 3.75vw;
+        display: inline-block;
+        position: relative;
+        &::after {
+          content: "";
+          display: inline-block;
+          height: 2px;
+          width: 0;
+          background-color: white;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          transition: all 1s;
+        }
+      }
+      > p:nth-child(2) {
+        font-size: 1.875vw;
+        margin-top: 2.96875vw;
+      }
+      > p:nth-child(3) {
+        font-size: 1.5625vw;
+        margin-top: 5.365vw;
+      }
+    }
+    > div:nth-child(1).description {
+      padding-right: 3.021vw;
+    }
+    > div:nth-child(2).description {
+      padding-left: 3.021vw;
+    }
+    &:hover {
+      > div.description {
+        p:nth-child(1)::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+  > article:nth-child(3) {
+    margin-bottom: 0;
+  }
+}
+
+.buttonWrap {
+  text-align: center;
+  .btn {
+    width: 17.8125vw;
+    height: 4.271vw;
+    outline: none;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    font-size: 1.40625vw;
+    margin: 5.729vw auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    position: relative;
+    z-index: 1;
+  }
+  .btn:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: white;
+    transition: all 0.5s ease;
+  }
+  .btn:hover {
+    color: #000;
+  }
+  .btn:hover:after {
+    left: 0;
+    width: 100%;
+  }
+  .btn:active {
+    top: 2px;
+  }
+}
+
+.arrowRight {
+  height: 24px;
+  position: relative;
+  bottom: 2px;
+}
+
+.banner {
+  height: 36.458vw;
+  background: url("/images/banner.jpg") no-repeat top;
+  background-attachment: fixed;
+  background-size: cover;
+  text-align: center;
+  padding-top: 9.21875vw;
+  font-family: Montserrat-Regular;
+  color: white;
+  p {
+    margin-top: 3.333vw;
+    font-size: 1.5625vw;
+  }
+  .mediaWrap {
+    margin: 0 auto;
+    margin-top: 4.167vw;
+    width: 31.25vw;
+  }
+}
+
+
+.about {
+  padding-top: 7.083vw;
+  padding-bottom: 10.417vw;
+  text-align: center;
+  color: white;
+  font-family: Montserrat-Regular;
+  background-color: #121212;
+  h3 {
+    margin-bottom: 2.604vw;
+  }
+  p {
+    font-size: 1.5625vw;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    margin: 0 15.625vw;
+    li {
+      flex: 1;
+    }
+  }
+}
