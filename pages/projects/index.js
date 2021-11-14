@@ -21,9 +21,9 @@ const renderArticle = (title, subtitle, src) => {
         height={900}
         zoom
       />
-      <div className={styles.articleTitle}>
-        <h4 {...backInUp}>{title}</h4>
-        <p {...backInUp}>{subtitle}</p>
+      <div {...backInUp} className={styles.articleTitle}>
+        <h4>{title}</h4>
+        <p>{subtitle}</p>
       </div>
     </article>
   )

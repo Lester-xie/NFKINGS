@@ -17,7 +17,7 @@ export default function FlexImage({width, height, zoom = false, mask = true, ...
       <div style={newStyles}>
         <div className={zoom ? styles.image : ''}>
           <div className={mask ? styles.mask : ''} />
-          <Image width={newWidth} height={newHeight} objectFit="cover" {...props} />
+          <Image priority width={newWidth} height={newHeight} objectFit="cover" {...props} />
         </div>
       </div>
     )
