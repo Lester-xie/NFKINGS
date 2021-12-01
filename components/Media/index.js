@@ -26,7 +26,7 @@ export default function Media({size = 'large'}) {
       {mediasList.map(media => {
         return (
           <li key={media.name}>
-            <a href={media.url} target="_blank">
+            <a href={media.url}>
               <FlexImage
                 src={`/images/media/${media.name}.png`}
                 width={width}
