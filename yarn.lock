@@ -2886,6 +2886,11 @@ uri-js@^4.2.2:
   dependencies:
     punycode "^2.1.0"
 
+use-animate-number@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.npmmirror.com/use-animate-number/download/use-animate-number-1.0.5.tgz#c224fd3ce81d0b563a5215d714aaa98ad8c67470"
+  integrity sha1-wiT9POgdC1Y6UhXXFKqpitjGdHA=
+
 use-subscription@1.5.1:
   version "1.5.1"
   resolved "https://registry.npmmirror.com/use-subscription/download/use-subscription-1.5.1.tgz#73501107f02fad84c6dd57965beb0b75c68c42d1"

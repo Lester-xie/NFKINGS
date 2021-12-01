@@ -1,0 +1,101 @@
+.container {
+  .bannerWrap {
+    position: relative;
+    .h3 {
+      color: black;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .span {
+      margin-left: 32px;
+      color: #707070;
+    }
+    .div {
+      text-align: center;
+      font-size: 16px;
+    }
+  }
+  .contactWrap {
+    background-color: #1B1B1B;
+    padding: 13.021vw 15.625vw;
+    display: flex;
+    .touch {
+      font-size: 1.458vw;
+      color: white;
+    }
+    .contact {
+      width: 20.833vw;
+      margin-right: 8.854vw;
+      .work {
+        margin-top: 2.604vw;
+        color: #c6c6c6;
+      }
+      .combination {
+        margin-top: 2.604vw;
+        margin-bottom: 2.604vw;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        .email {
+          color: #c6c6c6;
+          margin-left: 30px;
+        }
+      }
+    }
+    .form {
+      flex: 1;
+      .inputWrap {
+        margin-top: 0.9375vw;
+        display: flex;
+        input {
+          flex: 1;
+          height: 3.958vw;
+          background-color: transparent;
+          border: none;
+          outline: none;
+          font-size: 1.458vw;
+          color: white;
+          padding: 1.042vw 0;
+          border-bottom: 1px solid #535353;
+          margin-right: 2.083vw;
+          &::placeholder {
+            color: #c6c6c6;
+          }
+        }
+      }
+      textarea {
+        margin-top: 2.604vw;
+        font-size: 1.458vw;
+        height: 10.417vw;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        border-bottom: 2px solid #535353;
+        width: 100%;
+        color: white;
+        resize: none;
+        &::placeholder {
+          color: #c6c6c6;
+          font-family: AdobeHeitiStd-Regular;
+        }
+      }
+      button {
+        margin-top: 30px;
+        height: 40px;
+        width: 100%;
+        border-radius: 14px;
+        outline: none;
+        border: none;
+        color: white;
+        background-color: #8a8de7;
+        font-size: 16px;
+      }
+    }
+    .media {
+      margin-top: 20px;
+      width: 120px;
+    }
+  }
+}

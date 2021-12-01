@@ -4,102 +4,146 @@ import styles from './index.module.scss'
 import {useEffect} from "react";
 import {callObserver} from "../../utils";
 import FlexImage from "../../components/FlexImage";
+import useAnimateNumber from 'use-animate-number';
 
-const backInUp = {
+const slideInUp = {
   className: 'animate__animated',
-  'data-animate': 'animate__backInUp'
+  'data-animate': 'animate__slideInUp'
+}
+const slideInLeft = {
+  className: 'animate__animated',
+  'data-animate': 'animate__slideInLeft'
+}
+const slideInRight = {
+  className: 'animate__animated',
+  'data-animate': 'animate__slideInRight'
 }
 const zoomIn = {
   className: 'animate__animated',
   'data-animate': 'animate__zoomIn'
 }
 
-function useDescription(title) {
-  return (
-    <>
-      <h3 {...backInUp} dangerouslySetInnerHTML={{__html: title}} />
-      <div className={styles.description}>
-        <div {...backInUp}>
-          <p>Established in 2021, NFKings Productions Limited (“NFKings”)</p>
-          <p>is a fast-growing NFT creatives, production and distribution</p>
-          <p>company for many top tier Intellectual Properties (“IPs”) and Brands. </p>
-          <p>The first core competence of NFKings is in its creative</p>
-          <p>and production capability.</p>
-          <p>The core creative team consists of award-winning creatives, </p>
-          <p>film / animation directors and KOLs whose impressive portfolio</p>
-          <p>include Cartoon Network, Disney, National Geographic, Warner </p>
-          <p>Group, Jay Chou, MediaCorp, Vogue, Esquire, Youku, De Beers, </p>
-          <p>Samsung amongst many others.</p>
-          <p>The second core competence of NFKings is in the solicitation</p>
-          <p>and management of IPs and Brands. In a short span of just 2 months,</p>
-          <p>NFKings has secured more than 100 top tier IPs and Brands, to create,</p>
-          <p>produce and distribute their first ever NFTs. </p>
-          <p>These IPs and Brands cover a wide range of industries including </p>
-          <p>celebrities, fashion, toys, esports, sports, galleries, artists etc.</p>
-          <p>Our first IP “tokidoki” sold out 125,000 Mystery Boxes on Binance </p>
-          <p>NFT at US$20 each in seconds, grossing US$2.5mil.</p>
-        </div>
-      </div>
-    </>
-  )
-}
+const ops = {decimals: 0}
 
 export default function About() {
   useEffect(() => {
     callObserver('main')
+    setValue325(325);
+    setValue180(180);
+    setValue20(20);
+    setValue50(50);
   }, []);
-const description = useDescription('ABOUT US')
-const philosophy = useDescription('COMPANY<br />PHILOSOPHY')
+  const [value325, setValue325] = useAnimateNumber(0, ops);
+  const [value180, setValue180] = useAnimateNumber(0, ops);
+  const [value20, setValue20] = useAnimateNumber(0, ops);
+  const [value50, setValue50] = useAnimateNumber(0, ops);
+
   return (
     <Layout>
       <div className={styles.container}>
-        {description}
-        <FlexImage
-          src="/images/about/about-banner.jpg"
-          className="animate__animated"
-          data-animate="animate__zoomIn"
-          height={889}
-          width={1920}
-        />
-        <div className={styles.companyWrap}>
-          {philosophy}
+        <div className={styles.bannerWrap}>
+          <FlexImage width={1920} height={442} src="/images/about/banner.jpg" />
+          <div className={styles.bannerDes}>
+            <div className={styles.left}>
+              <div {...slideInUp}>
+                <h3>NFKINGS IS A LEADING INNOVATIVE NFT ECOSYSTEM PLATFORM</h3>
+                <p>Established in 2021, NFKings has signed numerous top-tier intellectual properties, brands and celebrities to be part of its NFT Ecosystem that comprises NFTs, Game-Fi and a Metaverse.</p>
+              </div>
+            </div>
+            <div className={styles.right}>
+              <div>
+                <p>{`> ${value325}K NFTs sold`}</p>
+                <p>{`${value180} countries`}</p>
+                <p>{`> ${value20} categories`}</p>
+                <p>{`> ${value50}mil combined fan base`}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className={styles.bannerItem}>
+          <div {...slideInLeft}>
+            <FlexImage width={960} height={542} src="/images/about/about_banner1.jpg" />
+          </div>
+          <div className={styles.content}>
+            <div {...slideInRight}>
+              <div className={styles.right}>
+                <h3>ABOUT US</h3>
+                <p>NFKings is a leading NFT ecosystem platform that is focused on the three key pillars that build the foundation for sustainability of the Metaverse. Firstly, the creation and production of branded NFTs that will populate the Metaverse. Secondly, the creation and production of NFT games that entertain users while allowing growth of utility for these branded NFTs. Lastly, a beautifully created Metaverse that links NFTs and Game-fi into one arena where all of us mingle, socialise and interact. Essentially, a new internet world on the blockchain.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className={styles.bannerItem}>
+          <div className={styles.content}>
+            <div {...slideInLeft}>
+              <div className={styles.left}>
+                <h3>OUR OFFER TO CLIENTS</h3>
+                <p>Established in 2021, NFKings Productions Limited (“NFKings”) is a fast-growing NFT creatives, production and distribution company for many top tier Intellectual Properties (“IPs”) and Brands. The first core competence of NFKings is in its creative and production capability. The core creative team consists of award-winning creatives, film / animation directors and KOLs whose impressive portfolio include Cartoon Network, Disney, National Geographic, Warner Group, Jay Chou, Meditery Boxes on Binance NFT at US$20 each in seconds, grossing US$2.5mil.</p>
+              </div>
+            </div>
+          </div>
+          <div {...slideInRight}>
+            <FlexImage width={960} height={542} src="/images/about/about_banner2.jpg" />
+          </div>
+        </div>
+        <div className={styles.aboutWrap}>
+          <div {...slideInUp}>
+            <h3>ABOUT US</h3>
+            <p>NFKings is a leading NFT ecosystem platform that is focused on the three key pillars that build the foundation for sustainability of the Metaverse. Firstly, the creation and production of branded NFTs that will populate the Metaverse. Secondly, the creation and production of NFT games ed NFTs. Lastly, a beautifully created Metaverse that links NFTs and Game-fi into one arena where all of us mingle, socialise and interact. Essentially, a new internet world on the blockchain.</p>
+            <FlexImage width={946} height={542} src="/images/about/about_banner3.jpg" />
+          </div>
         </div>
         <div className={styles.customers}>
-          <h3>CUSTOMERS</h3>
-          <ul className={styles.ul1}>
+          <h3>PORTFOLIO</h3>
+          <ul>
             <li>
-              <FlexImage src="/images/about/1.png" width={201} height={65} {...zoomIn}/>
+              <FlexImage src="/images/about/blank.jpg" width={87} height={87} {...zoomIn}/>
             </li>
             <li>
-              <FlexImage src="/images/about/2.png" width={143} height={108} {...zoomIn}/>
+              <FlexImage src="/images/about/1.png" width={140} height={45} {...zoomIn}/>
             </li>
             <li>
-              <FlexImage src="/images/about/3.png" width={221} height={64} {...zoomIn}/>
+              <FlexImage src="/images/about/2.png" width={100} height={76} {...zoomIn}/>
             </li>
             <li>
-              <FlexImage src="/images/about/4.png" width={221} height={103} {...zoomIn}/>
+              <FlexImage src="/images/about/3.png" width={154} height={44} {...zoomIn}/>
             </li>
             <li>
-              <FlexImage src="/images/about/5.png" width={112} height={166} {...zoomIn}/>
+              <FlexImage src="/images/about/new1.png" width={218} height={43} {...zoomIn}/>
+            </li>
+            <li>
+              <FlexImage src="/images/about/5.png" width={78} height={116} {...zoomIn}/>
+            </li>
+            <li>
+              <FlexImage src="/images/about/4.png" width={154} height={72} {...zoomIn}/>
             </li>
           </ul>
           <ul>
             <li>
-              <FlexImage src="/images/about/6.png" width={240} height={240} {...zoomIn}/>
+              <FlexImage src="/images/about/new2.png" width={92} height={92} {...zoomIn}/>
             </li>
             <li>
-              <FlexImage src="/images/about/7.png" width={204} height={204} {...zoomIn}/>
+              <FlexImage src="/images/about/6.png" width={168} height={168} {...zoomIn}/>
             </li>
             <li>
-              <FlexImage src="/images/about/8.png" width={164} height={119} {...zoomIn}/>
+              <FlexImage src="/images/about/7.png" width={142} height={142} {...zoomIn}/>
             </li>
             <li>
-              <FlexImage src="/images/about/9.png" width={97} height={136} {...zoomIn}/>
+              <FlexImage src="/images/about/8.png" width={115} height={83} {...zoomIn}/>
             </li>
             <li>
-              <FlexImage src="/images/about/10.png" width={127} height={124} {...zoomIn}/>
+              <FlexImage src="/images/about/blank2.png" width={136} height={50} {...zoomIn}/>
+            </li>
+            <li>
+              <FlexImage src="/images/about/9.png" width={108} height={66} {...zoomIn}/>
+            </li>
+            <li>
+              <FlexImage src="/images/about/10.png" width={109} height={81} {...zoomIn}/>
             </li>
           </ul>
+          <div className={styles.more}>
+            <a href="#">MORE···</a>
+          </div>
         </div>
       </div>
     </Layout>

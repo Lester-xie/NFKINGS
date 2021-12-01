@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import styles from './index.module.scss'
 
+import Image from 'next/image'
 import FlexImage from "../FlexImage";
 import Media from "../Media";
 import {useEffect} from "react";
@@ -22,7 +23,7 @@ export default function Layout({children}) {
       <header className={styles.header}>
         <Link href="/">
           <a>
-            <FlexImage src="/images/logo.svg" width={72} height={72} />
+            <FlexImage src="/images/logo.svg" width={48} height={72} />
           </a>
         </Link>
         <ul>
@@ -32,23 +33,25 @@ export default function Layout({children}) {
             </Link>
           </li>
           <li className="animate__animated animate__backInRight">
-            <Link href="#">
+            <Link href="/projects">
+              <a>PORTFOLIO</a>
+            </Link>
+          </li>
+          <li className="animate__animated animate__backInRight">
+            <Link href="/contact">
               <a>CONTACT US</a>
             </Link>
           </li>
           <li className="animate__animated animate__backInRight">
-            <Link href="/projects">
-              <a>PROJECTS</a>
-            </Link>
-          </li>
-          <li className="animate__animated animate__backInRight">
             <Link href="#">
-              <a>Join the community</a>
+              <a>
+                <Image priority width={160} height={30} objectFit="cover" src="/videos/button.gif" />
+              </a>
             </Link>
           </li>
         </ul>
       </header>
-      <main>{children}</main>
+      <main className={styles.main}>{children}</main>
       <footer className={styles.footer}>
         <div className="animate__animated" data-animate="animate__slideInRight">
           <div>
@@ -67,14 +70,10 @@ export default function Layout({children}) {
             </Link>
           </div>
         </div>
-        <div className="animate__animated" data-animate="animate__zoomIn">
-          <FlexImage src="/images/big-logo.png" width={189} height={281} />
-        </div>
         <div className="animate__animated" data-animate="animate__slideInLeft">
-          <p>support@nfkings.io</p>
-          <p>Join the community</p>
           <div>
             <Media size="small" />
+            <p>enquiry@nfkings.io</p>
           </div>
         </div>
       </footer>
