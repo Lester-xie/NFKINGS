@@ -1,5 +1,5 @@
 import Layout from "../../components/Layout";
-
+import Link from 'next/link'
 import styles from './index.module.scss'
 import {useEffect} from "react";
 import {callObserver} from "../../utils";
@@ -23,7 +23,7 @@ const zoomIn = {
   'data-animate': 'animate__zoomIn'
 }
 
-const ops = {decimals: 0}
+const ops = {decimals: 0, duration: 2000}
 
 export default function About() {
   useEffect(() => {
@@ -52,10 +52,10 @@ export default function About() {
             </div>
             <div className={styles.right}>
               <div>
-                <p>{`> ${value325}K NFTs sold`}</p>
-                <p>{`${value180} countries`}</p>
-                <p>{`> ${value20} categories`}</p>
-                <p>{`> ${value50}mil combined fan base`}</p>
+                <p><span>{`>${value325}`}k</span> NFTs sold</p>
+                <p><span>{value180}</span> countries</p>
+                <p><span>{`>${value20}`}</span> categories</p>
+                <p><span>{`>${value50}`}mil</span> combined fan base</p>
               </div>
             </div>
           </div>
@@ -93,11 +93,11 @@ export default function About() {
             <FlexImage width={946} height={542} src="/images/about/about_banner3.jpg" />
           </div>
         </div>
-        <div className={styles.customers}>
+        <div className={styles.portfolio}>
           <h3>PORTFOLIO</h3>
           <ul>
             <li>
-              <FlexImage src="/images/about/blank.jpg" width={87} height={87} {...zoomIn}/>
+              <FlexImage src="/images/about/new3.png" width={87} height={87} {...zoomIn}/>
             </li>
             <li>
               <FlexImage src="/images/about/1.png" width={140} height={45} {...zoomIn}/>
@@ -132,7 +132,7 @@ export default function About() {
               <FlexImage src="/images/about/8.png" width={115} height={83} {...zoomIn}/>
             </li>
             <li>
-              <FlexImage src="/images/about/blank2.png" width={136} height={50} {...zoomIn}/>
+              <FlexImage src="/images/about/new4.png" width={136} height={50} {...zoomIn}/>
             </li>
             <li>
               <FlexImage src="/images/about/9.png" width={108} height={66} {...zoomIn}/>
@@ -142,7 +142,9 @@ export default function About() {
             </li>
           </ul>
           <div className={styles.more}>
-            <a href="#">MORE···</a>
+            <Link href="/projects">
+              <a >MORE···</a>
+            </Link>
           </div>
         </div>
       </div>
