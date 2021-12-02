@@ -31,8 +31,6 @@ export default function Media({size = 'large'}) {
                 src={`/images/media/${media.name}.png`}
                 width={width}
                 height={width}
-                className="animate__animated"
-                data-animate="animate__backInUp"
               />
             </a>
           </li>
