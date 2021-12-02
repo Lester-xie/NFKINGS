@@ -23,7 +23,7 @@ export default function Layout({children}) {
       <header className={styles.header}>
         <Link href="/">
           <a>
-            <FlexImage src="/images/logo.svg" width={48} height={72} />
+            <Image src="/images/logo.svg" width={28} height={42} />
           </a>
         </Link>
         <ul>
