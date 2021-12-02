@@ -50,6 +50,10 @@ export default function Layout({children}) {
             </Link>
           </li>
         </ul>
+        <div className={styles.floatRight}>
+          <Image src="/images/search.png" width={16} height={16} />
+          <span className={styles.language}>EN</span>
+        </div>
       </header>
       <main className={styles.main}>{children}</main>
       <footer className={styles.footer}>

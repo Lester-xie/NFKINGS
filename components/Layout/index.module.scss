@@ -36,6 +36,19 @@
     transform: scale(3.5);
     background-color: transparent;
   }
+  .floatRight {
+    position: absolute;
+    right: 30px;
+     .language {
+      color: white;
+      margin-left: 30px;
+      cursor: pointer;
+      display: inline-block;
+      line-height: 16px;
+      position: relative;
+      bottom: 2px;
+    }
+  }
 }
 
 .footer {
